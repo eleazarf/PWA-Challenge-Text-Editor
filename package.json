@@ -1,7 +1,7 @@
 {
   "name": "JATE",
   "version": "1.0.0",
-  "description": "",
+  "description": "A text editor designed as a Progressive Web App (PWA) with multiple data persistence methods to ensure redundancy in case a particular option is unsupported by the user's browser. The application is also capable of functioning offline.",
   "main": "server.js",
   "scripts": {
     "start:dev": "concurrently \"cd client && npm run build\" \"cd server && npm run server\" ",
