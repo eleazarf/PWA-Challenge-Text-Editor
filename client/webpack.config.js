@@ -23,8 +23,14 @@ module.exports = () => {
         template: './index.html',  // Generate an HTML file using this template
         title: 'Just Another Text Editor'  // Set the title of the generated HTML file
       }),
+
+      new InjectManifest({
+        swSrc: './src-sw.js',
+        // TODO: verify sdDest file
+        swDest: 'src-sw.js',
+      }),
       
-      new GenerateSW(),  // Set up service worker generation for runtime caching and PWA functionality
+      // new GenerateSW(),  // Set up service worker generation for runtime caching and PWA functionality
       
       new WebpackPwaManifest({
         name: 'PWA Text Editor',   // Define the app's name
@@ -33,22 +39,25 @@ module.exports = () => {
         background_color: '#ffffff',   // Specify the background color
         start_url: '/',   // Define the start URL of the app
         publicPath: '/',   // Set the public path
+        inject: true,
         fingerprints: false,   // Disable fingerprinting
-        publicPath: '.',   // Define the public path
+        // publicPath: '.',   // Define the public path
         icons: [
           {
-            src: path.resolve('assets/images/logo.png'),  // Specify the source path for app icons
+            // src: path.resolve('assets/images/logo.png'),  // Specify the source path for app icons
+            src: path.resolve('src/images/logo.png'),
             sizes: [96, 128, 192, 256, 384, 512], // Define multiple icon sizes
-            destination: path.join('assets', 'icon'),   // Specify the destination path for icons
+            destination: path.join('assets', 'icons'),   // Specify the destination path for icons
           }
         ]
       }),
       
-      new InjectManifest({
-        swSrc: './src-sw.js',   // Define the source for a custom service worker script
-        // TODO: Verify sdDest file
-        swDest: 'src-sw.js',   // Set the destination for the service worker script
-      }),      
+      // new InjectManifest({
+      //   swSrc: './src-sw.js',   // Define the source for a custom service worker script
+      //   // TODO: Verify sdDest file
+      //   // swDest: 'src-sw.js',   // Set the destination for the service worker script
+      //   swDest: 'service-worker.js',
+      // }),      
     ],
 
     module: {
