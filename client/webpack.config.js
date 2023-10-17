@@ -27,7 +27,8 @@ module.exports = () => {
       new InjectManifest({
         swSrc: './src-sw.js',
         // TODO: verify sdDest file
-        swDest: 'src-sw.js',
+        // swDest: 'src-sw.js',
+        swDest: 'service-worker.js',
       }),
       
       // new GenerateSW(),  // Set up service worker generation for runtime caching and PWA functionality
