@@ -15,7 +15,7 @@ To set up, run 'npm install' in the root directory's console. This fetches requi
 
 After installing dependencies, run "npm run start:dev" in the console to concurrently launch both the client and server.
 
-Also, the live deployment is available on Heroku, accessible through this ![link](https://eleazarf-jate-235721b2d008.herokuapp.com/) .
+Also, the live deployment is available on Heroku, accessible through this [link](https://eleazarf-jate-235721b2d008.herokuapp.com/) .
  
  ## Screenshots
  ![]()
