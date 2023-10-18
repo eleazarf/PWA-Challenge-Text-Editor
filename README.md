@@ -8,13 +8,14 @@ A text editor designed as a Progressive Web App (PWA) with multiple data persist
  4. [License](#license)
 
  ## Description
-
+This progressive web application operates seamlessly online and offline, even in a standalone context, thanks to an integrated service worker and Cache APIs. Its purpose is to provide users with a platform for taking notes and writing code snippets, ensuring functionality regardless of their internet connection status.
 
  ## Installation
- <!-- Run 'npm i' within the console, located at the root level of the directory. This will pull in the necessary node modules/packages.
- Once necessary dependencies are installed, "npm run start" (or 'nodemon server.js" if you have nodemon installed) in the console. 
- This will open a port at localhost:3001, accessible when 'localhost:3001' searched in browser, or when opened via Insomnia as demonstrated in the video link provided.
- The attached video walkthrough will demonstrate the application's functionality by running through CRUD operations (Create, Read, Update, and Delete) as they pertain to a NoSQL type social network. -->
+To set up, run 'npm install' in the root directory's console. This fetches required node modules/packages from the package.json files in the root, client, and server levels.
+
+After installing dependencies, run "npm run start:dev" in the console to concurrently launch both the client and server.
+
+Also, the live deployment is available on Heroku, accessible through this ![link]() .
  
  ## Screenshots
  ![]()
