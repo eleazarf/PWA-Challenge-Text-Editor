@@ -38,5 +38,3 @@ export const getDb = async () => {
   console.log('Data successfully pulled from jateDB', result);
   return result?.value;
 };
-
-initdb();
